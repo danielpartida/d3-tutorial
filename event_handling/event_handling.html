@@ -11,22 +11,6 @@
     <div></div>
 </body>
 
-<script>
-    d3.selectAll("div")
-      .on("mouseover", function(){
-          d3.select(this)
-            .style("background-color", "orange");
-
-          // Get current event info
-          console.log(d3.event);
-          
-          // Get x & y co-ordinates
-          console.log(d3.pointer(this));
-      })
-      .on("mouseout", function(){
-          d3.select(this)
-            .style("background-color", "steelblue")
-      });
-</script>
+<script src="mouse_movements.js"></script>
 
 </html>
