@@ -6,13 +6,22 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
 </head>
 <body>
-    <p>First paragraph</p>
-    <p>Second paragraph</p>
-    <!-- <svg width="500" height="500">
-        <rect x="0" y="0" width="300" height="200" fill="yellow"></rect>
-    </svg> -->
+    <p></p>
+    <p></p>
+    <p></p>
 </body>
 <script>
-    d3.select("p").style("color", "green");
+    var data = [100, 200, 300];
+        var paragraph = d3.select("body")
+                .selectAll("p")
+                .data(data)
+                .text(function (d, i) {
+                    console.log("d: " + d);
+                    console.log("i: " + i);
+                    console.log("this: " + this);
+
+                    return d;
+                });
+    d3.select("#p2").style("color", "green");
 </script>
 </html>
