@@ -1,3 +1,17 @@
+update = () =>  {
+    bar1.transition()
+        .ease(d3.easeLinear)
+        .duration(2000)
+        .attr("height",120)
+
+    bar2.transition()
+        .ease(d3.easeLinear)
+        .duration(2000)
+        .delay(2000)
+        .attr("height",100)
+}
+
+
 var svg = d3.select("body")
         .append("svg")
         .attr("width", 1000)
@@ -19,16 +33,3 @@ var svg = d3.select("body")
         .attr("width", 10)
 
     update();
-
-function update() {
-        bar1.transition()
-            .ease(d3.easeLinear)
-            .duration(2000)
-            .attr("height",120)
-    
-        bar2.transition()
-            .ease(d3.easeLinear)
-            .duration(2000)
-            .delay(2000)
-            .attr("height",100)
-    }
